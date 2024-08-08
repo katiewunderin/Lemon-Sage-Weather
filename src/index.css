@@ -1,15 +1,64 @@
 body {
     background-color: aquamarine;
 }
+a{
+    color: gray;
+}
 .weather-app {
     background: white;
     max-width: 600px ;
-    margin: 30px auto;
+    margin: 45px auto;
     box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
     border-radius: 16px;
     padding: 30px;
+    font-size: 14px;
     font-family:Cambria,'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
 }
+header {
+  border-bottom: 1px solid #f9f7fe; 
+  padding: 0 0 30px 0;
+}
 .search-form-input {
+background-color: blanchedalmond;
+border: none;
+border-radius: 10px;
+width: 75%;
+font-size: 16px;
+padding: 15px 20px;
+}
+.search-form-button {
+background: gray;
+padding: 15px 20px;
+border: none;
+border-radius: 10px;
+margin-left: 6px;
+color: white;
+width: 20%;
+}
+main {
+    padding: 30px 0;
+}
+.weather-app-data {
+    display: flex;
+    justify-content: space-between;
+}
+.weather-app-city {
+    margin: 0;
+}
+.weather-app-container {
+    display: flex;
+    justify-content:space-between;
+    width: fit-content;
 
 }
+    .weather-app-icon {
+        display: flex;
+        justify-content: space-between;
+}
+footer {
+    border-top: 1px solid #f9f7fe; 
+    padding: 30px 0 0 0;
+    text-align: center;
+    font-size: 13px;
+    color:rgba(0,0,0,0.6);
+  }
