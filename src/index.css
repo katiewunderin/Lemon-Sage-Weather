@@ -1,50 +1,78 @@
 body {
-    background-color: aquamarine;
+    background: linear-gradient(167deg, #96acc2, #194a7a, #96a29f, #9fc0b8, #b8cfc9, #b8cfc9);
+    background-size: 1200% 1200%;
+
+    animation: AnimationName 30s ease infinite;
 }
+    @keyframes AnimationName {
+        0%{background-position:0% 17%}
+        50%{background-position:100% 84%}
+        100%{background-position:0% 17%}
+    }
 a{
-    color: gray;
+    color: #f65282;
+}
+a:hover {
+    color:#008866;
 }
 .weather-app {
-    background: white;
-    max-width: 600px ;
+    background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/137/980/original/blurege.png?1723091367");
+    max-width: 600px;
+    height: 450px;
     margin: 45px auto;
     box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
     border-radius: 16px;
     padding: 30px;
-    font-size: 14px;
-    font-family:Cambria,'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    font-size: 46px;
+    font-family:  Just_another_hand, Teko, Zeyada;
 }
 header {
   border-bottom: 1px solid #f9f7fe; 
   padding: 0 0 30px 0;
+  
 }
 .search-form-input {
-background-color: blanchedalmond;
+background-color: #f9f7fe;
 border: none;
 border-radius: 10px;
 width: 75%;
-font-size: 16px;
+font-size: 26px;
 padding: 15px 20px;
+font-family:  Just_another_hand, Teko, Zeyada;
 }
 .search-form-button {
-background: gray;
+background: #099862;
 padding: 15px 20px;
 border: none;
 border-radius: 10px;
 margin-left: 6px;
-color: white;
+color: #f9f7fe;
 width: 20%;
+font-family:  Just_another_hand, Teko, Zeyada;
+font-size: 26px;
+}
+.search-form-button:hover {
+    background: #f9f7fe;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 6px;
+    color: #099862;
+    width: 20%;
+    font-family:  Just_another_hand, Teko, Zeyada;
+    font-size: 26px;
 }
 main {
-    padding: 30px 0;
+    padding: 30px 0 6px 20px;
 }
 .weather-app-data {
     display: flex;
     justify-content: space-between;
+    margin: 16px;
 }
 .weather-app-city {
-    margin: 0;
-    font-size: 38px;
+    margin: 4px;
+    font-size: 46px;
     line-height: 48px;
 }
 .weather-app-container {
@@ -52,7 +80,7 @@ main {
     justify-content:space-between;
 }
 .weather-app-details {
-    font-size: 16px;
+    font-size: 23px;
     line-height: 20px;
 }
 .weather-app-details strong {
@@ -75,12 +103,13 @@ main {
 }
 .weather-app-unit {
     margin-top: 16px;
+    margin-left: 8px;
     font-size: 28px;
 }
 footer {
-    border-top: 1px solid #f9f7fe; 
-    padding: 30px 0 0 0;
+    border-top: 1px solid #f9f7fe;
+    padding: 60px 0 0 0;
     text-align: center;
-    font-size: 13px;
+    font-size: 24px;
     color:rgba(0,0,0,0.6);
-  }
+}
