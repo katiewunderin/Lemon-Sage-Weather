@@ -52,7 +52,31 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
+function displayForecast() {
+   
+    let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
+    let forecastHTML = "";
+
+    days.forEach(function (day) {
+        forecastHTML += `
+                <div class="forecast">
+                    <div class="forecast-day">
+                        <div class="forecast-date">${day}</div>
+                        <div class="forecast-icon"> ⛅️ </div>
+                        <div class="forecast-temp-day">H - <strong> </strong><small>℉</small></div>
+                        <div class="forecast-temp-night">L - <strong> </strong><small>℉</small></div>
+                    </div>
+                </div>
+            `;
+    });
+
+let forecastElement = document.querySelector("#forecast");
+forecastElement.innerHTML = forecastHTML;
+}
+
 let searchFormElement= document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Denver");
+
+displayForecast();
