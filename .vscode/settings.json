@@ -1,0 +1,13 @@
+{
+    "livePreview.debugOnExternalPreview": true,
+    "livePreview.defaultPreviewPath": "livePreview.autoRefreshPreview",
+    "livePreview.serverRoot": "livePreview.autoRefreshPreview)",
+    "livePreview.tasks.runTaskWithExternalPreview": true,
+    "workbench.editor.enablePreviewFromCodeNavigation": true,
+    "workbench.editor.autoLockGroups": {
+        "imagePreview.previewEditor": true,
+        "vscode.audioPreview": true,
+        "vscode.videoPreview": true,
+        "mainThreadWebview-markdown.preview": true
+    }
+}
