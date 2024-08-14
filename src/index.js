@@ -32,11 +32,10 @@ function formatDate(date) {
         "Saturday",
     ];
     let day = days[date.getDay()];
-    
+
     if (minutes < 10) {
         minutes = `0${minutes}`;
     }
-
     return    `${day}     ${hours}:${minutes}`;
 }
 function searchCity(city) {
@@ -44,14 +43,12 @@ function searchCity(city) {
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(refreshWeather);
   }
-
 function handleSearchSubmit(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-form-input");
 
   searchCity(searchInput.value);
 }
-
 function formatDay(timestamp){
     let date = new Date(timestamp * 1000);
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
@@ -65,7 +62,7 @@ function getForecast(city) {
 function displayForecast(response) {
     let forecastHTML = "";
     response.data.daily.forEach(function (day, index) {
-        if (index < 5) {
+        if (index >0 && index < 6) {
             forecastHTML += `
             <div class="weather-forecast-day">
                 <div class="weather-forecast-date">${formatDay(day.time)}</div>
