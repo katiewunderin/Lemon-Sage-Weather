@@ -3,69 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet"  type="ihttps://s3.amazonaws.com/shecodesio-production/uploads/files/000/137/980/original/blurege.png?1723091367" href="style/index.css" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    <link rel="stylesheet" href="style/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900&display=swap"
         rel="stylesheet"
-      />
-      <link rel="stylesheet" href="src/style.css"   />
-      <script src=" https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js">    </script>
-   <title>Lemon Sage Weather App</title>
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Lemon Sage Weather App</title>
 </head>
 <body>
     <div class="weather-app">
-    <header>
-        <form class="search-form" id="search-form">
-          <input type="Search"
-          placeholder="Enter a city..." 
-          required  
-          id="search-form-input" 
-          class="search-form-input"/>
+        <header>
+            <form class="search-form" id="search-form">
+                <input type="search"
+                placeholder="Enter a city..." 
+                required  
+                id="search-form-input" 
+                class="search-form-input"/>
                 <input type="submit" value="Search" class="search-form-button" />
-      </form>
-    </header>
-    <main> 
-        <div class="weather-app-data">
-            <div>
-                <h1 class="weather-app-city" id="city"></h1>
-                <p class="weather-app-details">
-                    <span id="time"></span>  | 
-                    <span id="description"></span>
-                    <br />
-                    Humidity:    <strong id="humidity"></strong> |  Wind:  <strong id="wind-speed"></strong>
-                </p>
-            </div>
-            <div class="weather-app-temperature-container">
-                <div id="icon">
-                    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png" 
-                    class="weather-app-icon"/>
+            </form>
+        </header>
+        <main> 
+            <div class="weather-app-data">
+                <div>
+                    <h1 class="weather-app-city" id="city">City Name</h1> 
+                    <p class="weather-app-details">
+                        <span id="time">Time</span>  | 
+                        <span id="description">Description</span> 
+                        <br />
+                        Humidity: <strong id="humidity">--%</strong> | Wind: <strong id="wind-speed">-- mph</strong> 
+                    </p>
                 </div>
-                <div class="weather-app-temperature" id="temperature">24</div>
-                <div class="weather-app-unit">℉</div>
-            </div>
-        </div>
-        <div class="forecast-container" id="forecast">
-            <div class="forecast">
-                <div class="forecast-day">
-                    <div class="forecast-date"> </div>
-                    <div class="forecast-icon">  </div>
-                    <div class="forecast-temp-day">H - <strong></strong><small>℉</small></div>
-                    <div class="forecast-temp-night">L - <strong></strong><small>℉</small></div>
+                <div class="weather-app-temperature-container">
+                    <div class="icon" id="icon">
+                        <img src="" class="temperature-icon" /> 
+                    </div>
+                    <div class="weather-app-temperature" id="temperature">--</div> 
+                    <div class="weather-app-unit" id="weather-app-unit">℉</div>
                 </div>
             </div>
-        </div>
-        <div class="weather-forecast" id="forecast"></div>
-    </main>
-    <footer>This project was coded by 
-        <a href="https://github.com/katiewunderin" target="_blank"> Katie Lunder</a>
-        and is 
-        <a href="https://github.com/katiewunderin/Lemon-Sage-Weather" target="_blank"> open-sourced on GitHub</a>
-        and
-        <a href="https://lemon-sage.netlify.app" target="_blank">hosted on Netlifly</a>
+                <div class="new-weather-forecast" id="weather-forecast">
+                    <div class="weather-forecast-day">
+                        <div class="weather-forecast-date"> Thu</div>
+                            <div class="weather-forecast-temperature">
+                            <div class="weather-forecast-temperature-day"><strong>18</strong></div>
+                            <div class="weather-forecast-temperature-night"><strong>15</strong></div>
+                        </div>
+                    </div>
+                    <div class="weather-forecast-day">
+                        <div class="weather-forecast-date">Fri</div>
+                            <div class="weather-forecast-temperature">
+                            <div class="weather-forecast-temperature-day"><strong>18</strong></div>
+                            <div class="weather-forecast-temperature-night"> <strong>15</strong></div>
+                        </div>
+                    </div>
+                    <div class="weather-forecast-day">
+                        <div class="weather-forecast-date">Sat</div>
+                            <div class="weather-forecast-temperature">
+                            <div class="weather-forecast-temperature-day"> <strong>18</strong></div>
+                            <div class="weather-forecast-temperature-night"> <strong>15</strong></div>
+                        </div>
+                    </div>
+                    <div class="weather-forecast-day">
+                        <div class="weather-forecast-date">Sun</div>
+                            <div class="weather-forecast-temperature">
+                            <div class="weather-forecast-temperature-day"> <strong>20</strong></div>
+                            <div class="weather-forecast-temperature-night"> <strong>18</strong></div>
+                        </div>
+                    </div>
+                    <div class="weather-forecast-day">
+                        <div class="weather-forecast-date">Mon</div>
+                            <div class="weather-forecast-temperature">
+                            <div class="weather-forecast-temperature-day"> <strong>19</strong></div>
+                            <div class="weather-forecast-temperature-night"> <strong>18</strong></div>
+                        </div>
+                    </div>
+            </div>
+        </main>
+        <footer>
+            This project was coded by 
+            <a href="https://github.com/katiewunderin" target="_blank">Katie Lunder</a>
+            and is 
+            <a href="https://github.com/katiewunderin/Lemon-Sage-Weather" target="_blank">open-sourced on GitHub</a>
+            and
+            <a href="https://lemon-sage.netlify.app" target="_blank">hosted on Netlify</a>
         </footer> 
-    </footer> 
     </div>
     <script src="src/index.js"></script>
 </body>
